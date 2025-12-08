@@ -1,253 +1,56 @@
-<!--
-CyberGuardX - Full Single-File Website
-Placeholders: REPLACE_CONTACT_EMAIL and REPLACE_CONTACT_PHONE in the contact form and footer.
-Instructions: Add real email & phone in those two places. Images use inline SVGs or public links.
--->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CyberGuardX Security — Protect Your Business</title>
-  <meta name="description" content="CyberGuardX Security — Web, Mobile, Cloud & Network security services. Professional VAPT, bug-bounty, SOC, and retainer plans." />
-  <style>
-    :root{
-      --bg:#0b1020; --card:#0f1724; --muted:#9aa4b2; --accent:#00c2a8; --glass: rgba(255,255,255,0.03);
-      --maxw:1100px;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:linear-gradient(180deg,#071024 0%, #071a2a 100%);color:#e6eef6;}
-    .container{max-width:var(--maxw);margin:0 auto;padding:28px}
-    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-    .logo{display:flex;gap:12px;align-items:center}
-    .logo svg{width:48px;height:48px}
-    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
-    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:48px 0}
-    .hero h1{font-size:34px;margin:0 0 12px}
-    .hero p{color:var(--muted);line-height:1.5}
-    .cta{display:flex;gap:12px;margin-top:18px}
-    .btn{background:var(--accent);color:#042024;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700}
-    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
-    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.6)}
-    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:22px}
-    .service{padding:14px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border:1px solid rgba(255,255,255,0.02)}
-    .service h4{margin:6px 0;color:#fff}
-    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .why{display:flex;gap:16px;align-items:center}
-    .testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:18px}
-    footer{padding:28px 0;color:var(--muted);font-size:14px;border-top:1px solid rgba(255,255,255,0.02);margin-top:36px}
-    .contact-form input,.contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;margin-top:8px}
-    .contact-grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
-    .price-pill{background:var(--glass);padding:8px 10px;border-radius:999px;color:var(--muted);font-weight:700}
-    @media(max-width:900px){.hero{grid-template-columns:1fr;}.contact-grid{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}.logo svg{width:40px;height:40px}}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberGuardX - Cyber Security</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0d0d0d;
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+            background: #111;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        section {
+            padding: 30px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            background: #00bcd4;
+            color: black;
+            font-weight: bold;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+        footer {
+            background: #111;
+            padding: 10px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="logo">
-        <!-- Inline logo SVG -->
-        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-          <rect width="80" height="80" rx="14" fill="#041826" />
-          <path d="M20 52 L40 24 L60 52" stroke="#00c2a8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M28 42 L52 42" stroke="#6fe6cf" stroke-width="3" stroke-linecap="round"/>
-        </svg>
-        <div>
-          <div style="font-weight:800;font-size:18px">CyberGuardX</div>
-          <div style="font-size:12px;color:var(--muted);margin-top:2px">Proactive Cybersecurity</div>
-        </div>
-      </div>
-      <nav>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
 
-    <main>
-      <section class="hero">
-        <div>
-          <div class="card">
-            <h1>Protect Your Business with World‑Class Cyber Security</h1>
-            <p>We are CyberGuardX — VAPT, Web & Mobile security, Cloud hardening, SOC monitoring and bug‑bounty services for startups and enterprises. Fast delivery. Clear reports. Actionable fixes.</p>
-            <div class="cta">
-              <a class="btn" href="#contact">Get Free Security Audit</a>
-              <a class="btn ghost" href="#services">Our Services</a>
-            </div>
-            <div class="services">
-              <div class="service"><strong>Web App VAPT</strong><div class="price-pill">₹10k – ₹80k</div><p style="color:var(--muted);margin-top:8px">OWASP top 10, Business logic, RCE, SQLi</p></div>
-              <div class="service"><strong>Mobile App Testing</strong><div class="price-pill">₹15k – ₹1L</div><p style="color:var(--muted);margin-top:8px">Static / dynamic analysis, API testing</p></div>
-              <div class="service"><strong>Cloud Security</strong><div class="price-pill">₹15k – ₹60k</div><p style="color:var(--muted);margin-top:8px">IAM, infra hardening, misconfig audit</p></div>
-              <div class="service"><strong>Monthly Retainer</strong><div class="price-pill">₹20k – ₹80k/m</div><p style="color:var(--muted);margin-top:8px">SOC support, patch management, monitoring</p></div>
-            </div>
-          </div>
-        </div>
+<header>CyberGuardX</header>
 
-        <aside>
-          <div class="card" style="text-align:center">
-            <div style="font-size:13px;color:var(--muted);">Featured</div>
-            <h3 style="margin:6px 0">Defender-Grade Security</h3>
-            <p style="color:var(--muted);font-size:14px">Fast reports • Clear fixes • 30 day remediation support</p>
-            <div style="margin-top:12px">
-              <div style="display:flex;justify-content:space-between;color:var(--muted);font-size:13px;margin-bottom:8px"><span>Avg delivery</span><span>5–9 days</span></div>
-              <div style="display:flex;justify-content:space-between;color:var(--muted);font-size:13px"><span>SLA</span><span>24/7 support</span></div>
-            </div>
-            <div style="margin-top:14px;color:var(--muted);font-size:13px">Trusted by startups & fintechs</div>
-          </div>
-        </aside>
-      </section>
+<section>
+    <h1>Welcome to CyberGuardX</h1>
+    <p>Cyber Security Learning, Tools, Updates & Tutorials.</p>
+    <a class="btn" href="#">Explore Now</a>
+</section>
 
-      <section id="services" style="margin-top:22px">
-        <div class="card">
-          <h2>Our Services</h2>
-          <p style="color:var(--muted)">Comprehensive security services designed to fit your product lifecycle.</p>
-          <div class="grid-2" style="margin-top:12px">
-            <div>
-              <h3>Penetration Testing (VAPT)</h3>
-              <p style="color:var(--muted)">Full‑stack simulated attacks, manual verification and prioritized remediation guidance.</p>
-              <ul style="color:var(--muted)">
-                <li>Web App VAPT</li>
-                <li>API Security</li>
-                <li>Mobile App Security</li>
-              </ul>
-            </div>
-            <div>
-              <h3>Cloud & Infrastructure</h3>
-              <p style="color:var(--muted)">CSP misconfigs, IAM reviews, infra as code audits and continuous posture checks.</p>
-              <ul style="color:var(--muted)">
-                <li>AWS / Azure / GCP Reviews</li>
-                <li>Container & Kubernetes</li>
-                <li>Secrets Management</li>
-              </ul>
-            </div>
-          </div>
+<footer>© 2025 CyberGuardX | All Rights Reserved</footer>
 
-          <div class="grid-2" style="margin-top:18px">
-            <div>
-              <h3>Managed Security / Retainer</h3>
-              <p style="color:var(--muted)">Monthly monitoring, incident response, patching and monthly reports.</p>
-            </div>
-            <div>
-              <h3>Bug Bounty & Offensive</h3>
-              <p style="color:var(--muted)">Program setup, triage and payout guidance, responsible disclosure handling.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" style="margin-top:22px">
-        <div class="card">
-          <h2>About CyberGuardX</h2>
-          <p style="color:var(--muted)">Founded by young security engineers with real pentest experience. We focus on fast, actionable reports and help teams fix issues — not just find them.</p>
-          <div style="display:flex;gap:12px;margin-top:12px;align-items:center">
-            <div style="width:84px;height:84px;border-radius:12px;background:var(--glass);display:flex;align-items:center;justify-content:center">CG</div>
-            <div>
-              <div style="font-weight:700">Aman Kumar — Founder</div>
-              <div style="color:var(--muted);font-size:13px;margin-top:6px">Ex‑bug bounty, Web & Mobile pentester. Leading a small team building secure products.</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="pricing" style="margin-top:22px">
-        <div class="card">
-          <h2>Pricing & Plans</h2>
-          <p style="color:var(--muted)">Flexible pricing for startups to enterprise. Pick a single engagement or a monthly plan.</p>
-          <div class="services" style="margin-top:12px">
-            <div class="service">
-              <h4>Starter — Web VAPT</h4>
-              <div class="price-pill">₹10,000+</div>
-              <p style="color:var(--muted);margin-top:8px">Small sites, quick report, prioritized fixes.</p>
-            </div>
-            <div class="service">
-              <h4>Pro — Full VAPT</h4>
-              <div class="price-pill">₹40,000+</div>
-              <p style="color:var(--muted);margin-top:8px">Large apps, full verification, recheck included.</p>
-            </div>
-            <div class="service">
-              <h4>Enterprise — Retainer</h4>
-              <div class="price-pill">₹80,000+/month</div>
-              <p style="color:var(--muted);margin-top:8px">Dedicated SOC support & monthly audits.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="testimonials" style="margin-top:22px">
-        <div class="card">
-          <h2>Testimonials</h2>
-          <div class="testimonials">
-            <div style="padding:12px;border-radius:8px;background:rgba(255,255,255,0.02)"><strong>Fintech startup</strong><p style="color:var(--muted)">"Fast and clear report. Helped us fix critical auth bugs in 48 hours."</p></div>
-            <div style="padding:12px;border-radius:8px;background:rgba(255,255,255,0.02)"><strong>Healthtech</strong><p style="color:var(--muted)">"Professional team and quick turnaround. Recommended."</p></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" style="margin-top:22px">
-        <div class="card">
-          <h2>Contact Us</h2>
-          <p style="color:var(--muted)">Tell us about your project — or get a free security audit.</p>
-
-          <div class="contact-grid">
-            <div>
-              <form class="contact-form" onsubmit="submitForm(event)">
-                <label>Your name</label>
-                <input id="name" required placeholder="Your full name" />
-                <label>Company / Website</label>
-                <input id="company" placeholder="company.com or app name" />
-                <label>Email</label>
-                <input id="email" type="email" required placeholder="you@company.com" />
-                <label>Message</label>
-                <textarea id="message" rows="6" placeholder="A short description of the work" required></textarea>
-                <div style="margin-top:10px"><button class="btn" type="submit">Request Audit</button></div>
-              </form>
-              <p style="color:var(--muted);font-size:13px;margin-top:10px">We reply within 24 hours. Replace the contact email/phone in the footer & form action with your email before going live.</p>
-            </div>
-
-            <aside>
-              <div class="card">
-                <h3>Office</h3>
-                <p style="color:var(--muted);font-size:14px">Mumbai, India (Address on request)</p>
-                <h3 style="margin-top:10px">Business Hours</h3>
-                <p style="color:var(--muted);font-size:14px">Mon–Sat • 10:00 – 19:00</p>
-                <h3 style="margin-top:10px">Contact</h3>
-                <p style="color:var(--muted);font-size:14px">Email: <span id="contactEmail">REPLACE_CONTACT_EMAIL</span><br/>Phone: <span id="contactPhone">REPLACE_CONTACT_PHONE</span></p>
-                <div style="margin-top:12px"><a class="btn" href="mailto:REPLACE_CONTACT_EMAIL">Email Us</a></div>
-              </div>
-            </aside>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <footer>
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-        <div>
-          <div style="font-weight:800">CyberGuardX</div>
-          <div style="color:var(--muted);font-size:13px">Secure Today, Safe Tomorrow</div>
-        </div>
-        <div style="color:var(--muted);font-size:13px">© <span id="year"></span> CyberGuardX. All rights reserved.</div>
-        <div style="color:var(--muted);font-size:13px">Email: <span id="footerEmail">REPLACE_CONTACT_EMAIL</span> • Phone: <span id="footerPhone">REPLACE_CONTACT_PHONE</span></div>
-      </div>
-    </footer>
-  </div>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    function submitForm(e){
-      e.preventDefault();
-      var name=document.getElementById('name').value;
-      var email=document.getElementById('email').value;
-      var company=document.getElementById('company').value;
-      var message=document.getElementById('message').value;
-      // Default behavior: open mail client. Replace mailto when backend/email provider is ready.
-      var mailto = 'mailto:REPLACE_CONTACT_EMAIL'
-                + '?subject=' + encodeURIComponent('Security Audit Request from '+name)
-                + '&body=' + encodeURIComponent('Name: '+name+'\nEmail: '+email+'\nCompany: '+company+'\n\nMessage:\n'+message);
-      window.location.href = mailto;
-    }
-  </script>
 </body>
 </html>
