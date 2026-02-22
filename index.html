@@ -1,253 +1,1434 @@
-<!--
-CyberGuardX - Full Single-File Website
-Placeholders: REPLACE_CONTACT_EMAIL and REPLACE_CONTACT_PHONE in the contact form and footer.
-Instructions: Add real email & phone in those two places. Images use inline SVGs or public links.
--->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CyberGuardX Security — Protect Your Business</title>
-  <meta name="description" content="CyberGuardX Security — Web, Mobile, Cloud & Network security services. Professional VAPT, bug-bounty, SOC, and retainer plans." />
-  <style>
-    :root{
-      --bg:#0b1020; --card:#0f1724; --muted:#9aa4b2; --accent:#00c2a8; --glass: rgba(255,255,255,0.03);
-      --maxw:1100px;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:linear-gradient(180deg,#071024 0%, #071a2a 100%);color:#e6eef6;}
-    .container{max-width:var(--maxw);margin:0 auto;padding:28px}
-    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-    .logo{display:flex;gap:12px;align-items:center}
-    .logo svg{width:48px;height:48px}
-    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
-    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:48px 0}
-    .hero h1{font-size:34px;margin:0 0 12px}
-    .hero p{color:var(--muted);line-height:1.5}
-    .cta{display:flex;gap:12px;margin-top:18px}
-    .btn{background:var(--accent);color:#042024;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700}
-    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
-    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.6)}
-    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:22px}
-    .service{padding:14px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border:1px solid rgba(255,255,255,0.02)}
-    .service h4{margin:6px 0;color:#fff}
-    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .why{display:flex;gap:16px;align-items:center}
-    .testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:18px}
-    footer{padding:28px 0;color:var(--muted);font-size:14px;border-top:1px solid rgba(255,255,255,0.02);margin-top:36px}
-    .contact-form input,.contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;margin-top:8px}
-    .contact-grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
-    .price-pill{background:var(--glass);padding:8px 10px;border-radius:999px;color:var(--muted);font-weight:700}
-    @media(max-width:900px){.hero{grid-template-columns:1fr;}.contact-grid{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}.logo svg{width:40px;height:40px}}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.CsGroupCEH - Cybersecurity & Ethical Hacking Solutions | Founded by Aman Kumar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1a1a2e;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: #00d4ff;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 15px;
+        }
+
+        .nav-links a:hover {
+            color: #00d4ff;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .btn-login {
+            background: transparent;
+            color: #1a1a2e;
+            padding: 10px 22px;
+            border: 2px solid #1a1a2e;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .btn-login:hover {
+            background: #1a1a2e;
+            color: white;
+        }
+
+        .btn-signup {
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            color: white;
+            padding: 10px 22px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .btn-signup:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: #1a1a2e;
+            transition: all 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 140px 0 80px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 42px;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-text h1 span {
+            color: #00d4ff;
+        }
+
+        .hero-text p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .secondary-button {
+            background: transparent;
+            color: #1a1a2e;
+            padding: 10px 25px;
+            border: 2px solid #1a1a2e;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .secondary-button:hover {
+            background: #1a1a2e;
+            color: white;
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .hero-image div {
+            width: 100%;
+            max-width: 380px;
+            height: 380px;
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 130px;
+            margin: 0 auto;
+            box-shadow: 0 20px 60px rgba(0, 212, 255, 0.2);
+        }
+
+        /* Login Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 420px;
+            position: relative;
+            animation: modalSlide 0.3s ease;
+        }
+
+        @keyframes modalSlide {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            color: #666;
+            transition: color 0.3s;
+        }
+
+        .modal-close:hover {
+            color: #1a1a2e;
+        }
+
+        .modal-logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .modal-logo a {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1a1a2e;
+            text-decoration: none;
+        }
+
+        .modal-logo a span {
+            color: #00d4ff;
+        }
+
+        .modal h2 {
+            text-align: center;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+            font-size: 24px;
+        }
+
+        .modal .modal-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        .modal .form-group {
+            margin-bottom: 18px;
+        }
+
+        .modal .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .modal .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+
+        .modal .form-group input:focus {
+            outline: none;
+            border-color: #00d4ff;
+        }
+
+        .modal .btn-login-submit {
+            width: 100%;
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .modal .btn-login-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
+        }
+
+        .modal .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .modal .remember-forgot label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #666;
+            cursor: pointer;
+        }
+
+        .modal .remember-forgot a {
+            color: #00d4ff;
+            text-decoration: none;
+        }
+
+        .modal .divider {
+            display: flex;
+            align-items: center;
+            margin: 25px 0;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .modal .divider::before,
+        .modal .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #e9ecef;
+        }
+
+        .modal .divider span {
+            padding: 0 15px;
+        }
+
+        .modal .social-login {
+            display: flex;
+            gap: 15px;
+        }
+
+        .modal .social-login button {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            background: white;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .modal .social-login button:hover {
+            border-color: #00d4ff;
+            background: #f0f8ff;
+        }
+
+        .modal .signup-link {
+            text-align: center;
+            margin-top: 25px;
+            color: #666;
+        }
+
+        .modal .signup-link a {
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Founder Section */
+        .founder-section {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: #1a1a2e;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .founder-content {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .founder-image {
+            position: relative;
+        }
+
+        .founder-img {
+            width: 100%;
+            height: 420px;
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 110px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .founder-badge {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 14px;
+            white-space: nowrap;
+            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+        }
+
+        .founder-info h2 {
+            font-size: 36px;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+
+        .founder-title {
+            font-size: 18px;
+            color: #00d4ff;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .founder-info p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        .founder-qualifications {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .qualification-tag {
+            background: #f0f8ff;
+            color: #0099cc;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: 500;
+            border: 1px solid #e3f2fd;
+        }
+
+        .founder-social {
+            display: flex;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .founder-social a {
+            width: 42px;
+            height: 42px;
+            background: #f0f8ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0099cc;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .founder-social a:hover {
+            background: #00d4ff;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: #f8f9fa;
+            padding: 35px 28px;
+            border-radius: 15px;
+            transition: all 0.3s;
+            border: 1px solid #e9ecef;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-color: #00d4ff;
+        }
+
+        .service-icon {
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 22px;
+            font-size: 28px;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            color: #1a1a2e;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            height: 380px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 90px;
+            box-shadow: 0 20px 40px rgba(0, 153, 204, 0.3);
+        }
+
+        .about-text h2 {
+            font-size: 32px;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #666;
+            margin-bottom: 18px;
+            font-size: 15px;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            margin-top: 28px;
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .about-feature span {
+            color: #00d4ff;
+            font-size: 20px;
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 70px 0;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 42px;
+            color: #00d4ff;
+            margin-bottom: 10px;
+        }
+
+        .stat-item p {
+            font-size: 15px;
+            opacity: 0.8;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h2 {
+            font-size: 32px;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+        }
+
+        .contact-info > p {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 15px;
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 18px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .contact-item:hover {
+            transform: translateX(12px);
+            background: #f0f8ff;
+        }
+
+        .contact-item span {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-item-content h4 {
+            color: #1a1a2e;
+            font-size: 13px;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-item-content p {
+            color: #666;
+            margin: 0;
+            font-size: 16px;
+            font-weight: 500;
+            word-break: break-all;
+        }
+
+        .contact-form {
+            background: #f8f9fa;
+            padding: 35px;
+            border-radius: 20px;
+        }
+
+        .contact-form h3 {
+            font-size: 22px;
+            color: #1a1a2e;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #00d4ff;
+        }
+
+        .form-group textarea {
+            height: 130px;
+            resize: none;
+        }
+
+        .contact-form .btn-submit {
+            width: 100%;
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .contact-form .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 60px 0 25px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-about h3 {
+            font-size: 26px;
+            margin-bottom: 18px;
+        }
+
+        .footer-about h3 span {
+            color: #00d4ff;
+        }
+
+        .footer-about p {
+            opacity: 0.7;
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #00d4ff;
+            transform: translateY(-3px);
+        }
+
+        .footer-links h4 {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.7;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: #00d4ff;
+        }
+
+        .footer-contact-info p {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            opacity: 0.7;
+            font-size: 14px;
+        }
+
+        .footer-contact-info p span {
+            color: #00d4ff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 25px;
+            text-align: center;
+            opacity: 0.7;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-content,
+            .about-content,
+            .contact-content,
+            .founder-content {
+                grid-template-columns: 1fr;
+            }
+
+            .founder-img {
+                height: 350px;
+                max-width: 350px;
+                margin: 0 auto;
+            }
+
+            .founder-content {
+                text-align: center;
+            }
+
+            .founder-qualifications {
+                justify-content: center;
+            }
+
+            .founder-social {
+                justify-content: center;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links,
+            .nav-buttons {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .hero-text h1 {
+                font-size: 32px;
+            }
+
+            .hero-image div {
+                width: 280px;
+                height: 280px;
+                font-size: 100px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+            .founder-info h2 {
+                font-size: 28px;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 25px;
+            }
+
+            .stat-item h3 {
+                font-size: 32px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .footer-contact-info p {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .hero {
+                padding: 120px 0 60px;
+            }
+
+            .hero-text h1 {
+                font-size: 26px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal {
+                padding: 30px 20px;
+                margin: 15px;
+            }
+        }
+
+        /* Mobile Menu Active State */
+        .mobile-menu-active .nav-links {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .mobile-menu-active .nav-links li {
+            margin: 10px 0;
+        }
+
+        .mobile-menu-active .nav-buttons {
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
+    <!-- Header -->
     <header>
-      <div class="logo">
-        <!-- Inline logo SVG -->
-        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-          <rect width="80" height="80" rx="14" fill="#041826" />
-          <path d="M20 52 L40 24 L60 52" stroke="#00c2a8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M28 42 L52 42" stroke="#6fe6cf" stroke-width="3" stroke-linecap="round"/>
-        </svg>
-        <div>
-          <div style="font-weight:800;font-size:18px">CyberGuardX</div>
-          <div style="font-size:12px;color:var(--muted);margin-top:2px">Proactive Cybersecurity</div>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">A.Cs<span>GroupCEH</span></a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#founder">Founder</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <button class="btn-login" onclick="openLoginModal()">Login</button>
+                    <button class="btn-signup">Sign Up</button>
+                </div>
+                <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
         </div>
-      </div>
-      <nav>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#contact">Contact</a>
-      </nav>
     </header>
 
-    <main>
-      <section class="hero">
-        <div>
-          <div class="card">
-            <h1>Protect Your Business with World‑Class Cyber Security</h1>
-            <p>We are CyberGuardX — VAPT, Web & Mobile security, Cloud hardening, SOC monitoring and bug‑bounty services for startups and enterprises. Fast delivery. Clear reports. Actionable fixes.</p>
-            <div class="cta">
-              <a class="btn" href="#contact">Get Free Security Audit</a>
-              <a class="btn ghost" href="#services">Our Services</a>
+    <!-- Login Modal -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal">
+            <span class="modal-close" onclick="closeLoginModal()">&times;</span>
+            <div class="modal-logo">
+                <a href="#">A.Cs<span>GroupCEH</span></a>
             </div>
-            <div class="services">
-              <div class="service"><strong>Web App VAPT</strong><div class="price-pill">₹10k – ₹80k</div><p style="color:var(--muted);margin-top:8px">OWASP top 10, Business logic, RCE, SQLi</p></div>
-              <div class="service"><strong>Mobile App Testing</strong><div class="price-pill">₹15k – ₹1L</div><p style="color:var(--muted);margin-top:8px">Static / dynamic analysis, API testing</p></div>
-              <div class="service"><strong>Cloud Security</strong><div class="price-pill">₹15k – ₹60k</div><p style="color:var(--muted);margin-top:8px">IAM, infra hardening, misconfig audit</p></div>
-              <div class="service"><strong>Monthly Retainer</strong><div class="price-pill">₹20k – ₹80k/m</div><p style="color:var(--muted);margin-top:8px">SOC support, patch management, monitoring</p></div>
+            <h2>Welcome Back</h2>
+            <p class="modal-subtitle">Login to access your account</p>
+            <form onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter your password" required>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn-login-submit">Login Now</button>
+            </form>
+            <div class="divider"><span>or continue with</span></div>
+            <div class="social-login">
+                <button>Google</button>
+                <button>LinkedIn</button>
             </div>
-          </div>
+            <p class="signup-link">Don't have an account? <a href="#">Sign Up</a></p>
         </div>
+    </div>
 
-        <aside>
-          <div class="card" style="text-align:center">
-            <div style="font-size:13px;color:var(--muted);">Featured</div>
-            <h3 style="margin:6px 0">Defender-Grade Security</h3>
-            <p style="color:var(--muted);font-size:14px">Fast reports • Clear fixes • 30 day remediation support</p>
-            <div style="margin-top:12px">
-              <div style="display:flex;justify-content:space-between;color:var(--muted);font-size:13px;margin-bottom:8px"><span>Avg delivery</span><span>5–9 days</span></div>
-              <div style="display:flex;justify-content:space-between;color:var(--muted);font-size:13px"><span>SLA</span><span>24/7 support</span></div>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Secure Your Digital World With <span>Expert Cybersecurity</span></h1>
+                    <p>A.CsGroupCEH provides comprehensive cybersecurity solutions and ethical hacking services to protect your business from evolving digital threats.</p>
+                    <div class="hero-buttons">
+                        <button class="cta-button" onclick="openLoginModal()">Get Started</button>
+                        <button class="secondary-button">View Services</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div>🛡️</div>
+                </div>
             </div>
-            <div style="margin-top:14px;color:var(--muted);font-size:13px">Trusted by startups & fintechs</div>
-          </div>
-        </aside>
-      </section>
-
-      <section id="services" style="margin-top:22px">
-        <div class="card">
-          <h2>Our Services</h2>
-          <p style="color:var(--muted)">Comprehensive security services designed to fit your product lifecycle.</p>
-          <div class="grid-2" style="margin-top:12px">
-            <div>
-              <h3>Penetration Testing (VAPT)</h3>
-              <p style="color:var(--muted)">Full‑stack simulated attacks, manual verification and prioritized remediation guidance.</p>
-              <ul style="color:var(--muted)">
-                <li>Web App VAPT</li>
-                <li>API Security</li>
-                <li>Mobile App Security</li>
-              </ul>
-            </div>
-            <div>
-              <h3>Cloud & Infrastructure</h3>
-              <p style="color:var(--muted)">CSP misconfigs, IAM reviews, infra as code audits and continuous posture checks.</p>
-              <ul style="color:var(--muted)">
-                <li>AWS / Azure / GCP Reviews</li>
-                <li>Container & Kubernetes</li>
-                <li>Secrets Management</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="grid-2" style="margin-top:18px">
-            <div>
-              <h3>Managed Security / Retainer</h3>
-              <p style="color:var(--muted)">Monthly monitoring, incident response, patching and monthly reports.</p>
-            </div>
-            <div>
-              <h3>Bug Bounty & Offensive</h3>
-              <p style="color:var(--muted)">Program setup, triage and payout guidance, responsible disclosure handling.</p>
-            </div>
-          </div>
         </div>
-      </section>
+    </section>
 
-      <section id="about" style="margin-top:22px">
-        <div class="card">
-          <h2>About CyberGuardX</h2>
-          <p style="color:var(--muted)">Founded by young security engineers with real pentest experience. We focus on fast, actionable reports and help teams fix issues — not just find them.</p>
-          <div style="display:flex;gap:12px;margin-top:12px;align-items:center">
-            <div style="width:84px;height:84px;border-radius:12px;background:var(--glass);display:flex;align-items:center;justify-content:center">CG</div>
-            <div>
-              <div style="font-weight:700">Aman Kumar — Founder</div>
-              <div style="color:var(--muted);font-size:13px;margin-top:6px">Ex‑bug bounty, Web & Mobile pentester. Leading a small team building secure products.</div>
+    <!-- Founder Section -->
+    <section class="founder-section" id="founder">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Founder</h2>
+                <p>The visionary leader behind A.CsGroupCEH's cybersecurity excellence</p>
             </div>
-          </div>
+            <div class="founder-content">
+                <div class="founder-image">
+                    <div class="founder-img">👨‍💼</div>
+                    <div class="founder-badge">CEO & Founder</div>
+                </div>
+                <div class="founder-info">
+                    <h2>Aman Kumar</h2>
+                    <div class="founder-title">Founder & Chief Executive Officer</div>
+                    <p>Aman Kumar is a visionary entrepreneur and certified cybersecurity expert with a passion for protecting businesses from digital threats. With extensive experience in ethical hacking and security consulting, he founded A.CsGroupCEH with a mission to make cybersecurity accessible to organizations of all sizes.</p>
+                    <p>His expertise spans across penetration testing, network security, vulnerability assessment, and incident response. Under his leadership, A.CsGroupCEH has become a trusted name in the cybersecurity industry.</p>
+                    <div class="founder-qualifications">
+                        <span class="qualification-tag">✓ CEH Certified</span>
+                        <span class="qualification-tag">✓ CISSP</span>
+                        <span class="qualification-tag">✓ Security+</span>
+                        <span class="qualification-tag">✓ 10+ Years Experience</span>
+                    </div>
+                    <div class="founder-social">
+                        <a href="#" title="LinkedIn">in</a>
+                        <a href="#" title="Twitter">X</a>
+                        <a href="#" title="Instagram">ig</a>
+                        <a href="#" title="Email">✉</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <section id="pricing" style="margin-top:22px">
-        <div class="card">
-          <h2>Pricing & Plans</h2>
-          <p style="color:var(--muted)">Flexible pricing for startups to enterprise. Pick a single engagement or a monthly plan.</p>
-          <div class="services" style="margin-top:12px">
-            <div class="service">
-              <h4>Starter — Web VAPT</h4>
-              <div class="price-pill">₹10,000+</div>
-              <p style="color:var(--muted);margin-top:8px">Small sites, quick report, prioritized fixes.</p>
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Cybersecurity Services</h2>
+                <p>Comprehensive security solutions tailored to protect your organization from cyber threats</p>
             </div>
-            <div class="service">
-              <h4>Pro — Full VAPT</h4>
-              <div class="price-pill">₹40,000+</div>
-              <p style="color:var(--muted);margin-top:8px">Large apps, full verification, recheck included.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>Penetration Testing</h3>
+                    <p>Thorough vulnerability assessment and penetration testing to identify and fix security weaknesses before hackers exploit them.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Network Security</h3>
+                    <p>Complete network protection solutions including firewall configuration, intrusion detection, and real-time monitoring.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Ethical Hacking</h3>
+                    <p>Certified ethical hackers simulate real-world attacks to test your system's defenses and provide actionable recommendations.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Security Audits</h3>
+                    <p>Comprehensive security audits to assess your current security posture and identify areas for improvement.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎓</div>
+                    <h3>Security Training</h3>
+                    <p>Employee cybersecurity awareness training to prevent social engineering attacks and phishing attempts.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚨</div>
+                    <h3>Incident Response</h3>
+                    <p>24/7 incident response team ready to handle security breaches and minimize damage from cyber attacks.</p>
+                </div>
             </div>
-            <div class="service">
-              <h4>Enterprise — Retainer</h4>
-              <div class="price-pill">₹80,000+/month</div>
-              <p style="color:var(--muted);margin-top:8px">Dedicated SOC support & monthly audits.</p>
-            </div>
-          </div>
         </div>
-      </section>
+    </section>
 
-      <section id="testimonials" style="margin-top:22px">
-        <div class="card">
-          <h2>Testimonials</h2>
-          <div class="testimonials">
-            <div style="padding:12px;border-radius:8px;background:rgba(255,255,255,0.02)"><strong>Fintech startup</strong><p style="color:var(--muted)">"Fast and clear report. Helped us fix critical auth bugs in 48 hours."</p></div>
-            <div style="padding:12px;border-radius:8px;background:rgba(255,255,255,0.02)"><strong>Healthtech</strong><p style="color:var(--muted)">"Professional team and quick turnaround. Recommended."</p></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" style="margin-top:22px">
-        <div class="card">
-          <h2>Contact Us</h2>
-          <p style="color:var(--muted)">Tell us about your project — or get a free security audit.</p>
-
-          <div class="contact-grid">
-            <div>
-              <form class="contact-form" onsubmit="submitForm(event)">
-                <label>Your name</label>
-                <input id="name" required placeholder="Your full name" />
-                <label>Company / Website</label>
-                <input id="company" placeholder="company.com or app name" />
-                <label>Email</label>
-                <input id="email" type="email" required placeholder="you@company.com" />
-                <label>Message</label>
-                <textarea id="message" rows="6" placeholder="A short description of the work" required></textarea>
-                <div style="margin-top:10px"><button class="btn" type="submit">Request Audit</button></div>
-              </form>
-              <p style="color:var(--muted);font-size:13px;margin-top:10px">We reply within 24 hours. Replace the contact email/phone in the footer & form action with your email before going live.</p>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">🔐</div>
+                <div class="about-text">
+                    <h2>Why Choose A.CsGroupCEH?</h2>
+                    <p>We are a team of certified cybersecurity professionals dedicated to protecting businesses from digital threats. With years of experience in ethical hacking and security consulting, we provide top-notch solutions tailored to your specific needs.</p>
+                    <p>Our approach combines advanced technology with industry best practices to deliver comprehensive security coverage for organizations of all sizes.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <span>✓</span>
+                            <p>CEH Certified Experts</p>
+                        </div>
+                        <div class="about-feature">
+                            <span>✓</span>
+                            <p>24/7 Support Available</p>
+                        </div>
+                        <div class="about-feature">
+                            <span>✓</span>
+                            <p>Custom Solutions</p>
+                        </div>
+                        <div class="about-feature">
+                            <span>✓</span>
+                            <p>Competitive Pricing</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <aside>
-              <div class="card">
-                <h3>Office</h3>
-                <p style="color:var(--muted);font-size:14px">Mumbai, India (Address on request)</p>
-                <h3 style="margin-top:10px">Business Hours</h3>
-                <p style="color:var(--muted);font-size:14px">Mon–Sat • 10:00 – 19:00</p>
-                <h3 style="margin-top:10px">Contact</h3>
-                <p style="color:var(--muted);font-size:14px">Email: <span id="contactEmail">REPLACE_CONTACT_EMAIL</span><br/>Phone: <span id="contactPhone">REPLACE_CONTACT_PHONE</span></p>
-                <div style="margin-top:12px"><a class="btn" href="mailto:REPLACE_CONTACT_EMAIL">Email Us</a></div>
-              </div>
-            </aside>
-          </div>
         </div>
-      </section>
+    </section>
 
-    </main>
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-item">
+                    <h3>200+</h3>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Certified Experts</p>
+                </div>
+                <div class="stat-item">
+                    <h3>99%</h3>
+                    <p>Success Rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Ready to secure your business? Contact us for a free consultation</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Let's Secure Your Future Together</h2>
+                    <p>Reach out to our team of cybersecurity experts for personalized security solutions tailored to your organization's needs.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span>📍</span>
+                            <div class="contact-item-content">
+                                <h4>Office Address</h4>
+                                <p>123 Security Street, Cyber City, India</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span>📞</span>
+                            <div class="contact-item-content">
+                                <h4>Phone Number</h4>
+                                <p>+91 7579796727</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span>✉️</span>
+                            <div class="contact-item-content">
+                                <h4>Email Address</h4>
+                                <p>cyberguardxas@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span>🌐</span>
+                            <div class="contact-item-content">
+                                <h4>Website</h4>
+                                <p>www.acscgroupceh.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form onsubmit="handleContact(event)">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" placeholder="Enter your phone number">
+                        </div>
+                        <div class="form-group">
+                            <label>Your Message</label>
+                            <textarea placeholder="How can we help you?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-        <div>
-          <div style="font-weight:800">CyberGuardX</div>
-          <div style="color:var(--muted);font-size:13px">Secure Today, Safe Tomorrow</div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>A.Cs<span>GroupCEH</span></h3>
+                    <p>Your trusted partner in cybersecurity and ethical hacking solutions. Protecting businesses from digital threats since 2020.</p>
+                    <div class="social-links">
+                        <a href="#">f</a>
+                        <a href="#">in</a>
+                        <a href="#">X</a>
+                        <a href="#">ig</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#founder">Founder</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Penetration Testing</a></li>
+                        <li><a href="#">Network Security</a></li>
+                        <li><a href="#">Ethical Hacking</a></li>
+                        <li><a href="#">Security Audits</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact Info</h4>
+                    <div class="footer-contact-info">
+                        <p><span>📞</span> +91 7579796727</p>
+                        <p><span>✉️</span> cyberguardxas@gmail.com</p>
+                        <p><span>📍</span> Cyber City, India</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 A.CsGroupCEH. All rights reserved. | Designed with ❤️ by Aman Kumar</p>
+            </div>
         </div>
-        <div style="color:var(--muted);font-size:13px">© <span id="year"></span> CyberGuardX. All rights reserved.</div>
-        <div style="color:var(--muted);font-size:13px">Email: <span id="footerEmail">REPLACE_CONTACT_EMAIL</span> • Phone: <span id="footerPhone">REPLACE_CONTACT_PHONE</span></div>
-      </div>
     </footer>
-  </div>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    function submitForm(e){
-      e.preventDefault();
-      var name=document.getElementById('name').value;
-      var email=document.getElementById('email').value;
-      var company=document.getElementById('company').value;
-      var message=document.getElementById('message').value;
-      // Default behavior: open mail client. Replace mailto when backend/email provider is ready.
-      var mailto = 'mailto:REPLACE_CONTACT_EMAIL'
-                + '?subject=' + encodeURIComponent('Security Audit Request from '+name)
-                + '&body=' + encodeURIComponent('Name: '+name+'\nEmail: '+email+'\nCompany: '+company+'\n\nMessage:\n'+message);
-      window.location.href = mailto;
-    }
-  </script>
+    <!-- JavaScript -->
+    <script>
+        // Login Modal Functions
+        function openLoginModal() {
+            document.getElementById('loginModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLoginModal() {
+            document.getElementById('loginModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('loginModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLoginModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLoginModal();
+            }
+        });
+
+        // Handle Login Form
+        function handleLogin(e) {
+            e.preventDefault();
+            alert('Login functionality! In production, this would connect to your backend.');
+            closeLoginModal();
+        }
+
+        // Handle Contact Form
+        function handleContact(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you soon.');
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            document.querySelector('nav').classList.toggle('mobile-menu-active');
+        }
+
+        // Smooth Scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.querySelector('nav').classList.remove('mobile-menu-active');
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.15)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
 </body>
 </html>
